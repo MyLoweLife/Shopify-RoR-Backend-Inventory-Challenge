@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+search-btn-css {
+    padding-left: 155px;
+}
+
+input,
+textarea {
+width: 100%;
+padding: 3px;
+outline: none;
+}
+
+button {
+    margin-right: 5px;
+    margin-left: 5px;
+}

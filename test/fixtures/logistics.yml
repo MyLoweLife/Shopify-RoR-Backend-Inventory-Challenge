@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Inventory: MyString
+  List: MyString
+  product: MyString
+  color: MyString
+  size: MyString
+  quantity: MyString
+  location: MyString
+
+two:
+  Inventory: MyString
+  List: MyString
+  product: MyString
+  color: MyString
+  size: MyString
+  quantity: MyString
+  location: MyString

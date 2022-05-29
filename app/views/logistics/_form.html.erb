@@ -1,0 +1,44 @@
+<%= form_with(model: logistic, local: true) do |form| %>
+  <% if logistic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(logistic.errors.count, "error") %> prohibited this logistic from being saved:</h2>
+
+      <ul>
+      <% logistic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product, id: :logistic_product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :logistic_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size, id: :logistic_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity, id: :logistic_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :logistic_location %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

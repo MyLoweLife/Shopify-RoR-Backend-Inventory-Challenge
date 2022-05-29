@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
+
+
+  <div class="container-fluid">
+  <%= link_to 'Logistics App', root_path, class: "navbar-brand" %>
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/logistics">View Full Inventory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logistics/new">Add Inventory</a>
+        </li>
+    </div>
+    <form class="d-flex" role="search">
+        <input  type="search" placeholder="Search Inventory" aria-label="Search">
+        <button type="submit">Search</button>
+    </form>
+  </div>
+</nav>
