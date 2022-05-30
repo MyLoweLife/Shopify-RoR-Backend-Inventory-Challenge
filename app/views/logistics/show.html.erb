@@ -1,5 +1,7 @@
+<div class="card border-dark mb-3" style="max-width: 30rem;">
+  <div class="card-body text-dark">
+    
 <p id="notice"><%= notice %></p>
-
 
 <p>
   <strong>Product:</strong>
@@ -26,5 +28,9 @@
   <%= @logistic.location %>
 </p>
 
-<%= link_to 'Edit', edit_logistic_path(@logistic) %> |
-<%= link_to 'Back', logistics_path %>
+<%= link_to 'Edit', edit_logistic_path(@logistic), class:"btn btn-outline-secondary" %> |
+<%= link_to 'Back', logistics_path, class:"btn btn-outline-secondary" %>
+
+</div>
+</div>
+

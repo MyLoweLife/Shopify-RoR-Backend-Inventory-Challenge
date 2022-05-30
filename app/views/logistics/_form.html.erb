@@ -18,27 +18,27 @@
     <%= form.text_field :product, id: :logistic_product %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :color %>
     <%= form.text_field :color, id: :logistic_color %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :size %>
     <%= form.text_field :size, id: :logistic_size %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :quantity %>
     <%= form.text_field :quantity, id: :logistic_quantity %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :location %>
     <%= form.text_field :location, id: :logistic_location %>
   </div>
-
+</br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-outline-dark' %>
   </div>
 <% end %>

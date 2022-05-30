@@ -52,7 +52,7 @@ class LogisticsController < ApplicationController
     @logistic.destroy
 
     respond_to do |format|
-      format.html { redirect_to logistics_url, notice: "Logistic was successfully destroyed." }
+      format.html { redirect_to logistics_url, notice: "Entry was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -65,6 +65,6 @@ class LogisticsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def logistic_params
-      params.require(:logistic).permit(:product, :color, :size, :quantity, :location)
+      params.require(:logistic).permit(:Inventory, :List, :product, :color, :size, :quantity, :location)
     end
 end
