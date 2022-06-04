@@ -7,7 +7,7 @@ class CreateLogistics < ActiveRecord::Migration[5.1]
       t.string :color
       t.string :size
       t.string :quantity
-      t.string :location
+      t.string :location, unique: true
 
       t.timestamps
     end

@@ -28,9 +28,18 @@
   <%= @logistic.location %>
 </p>
 
+<p>
+  <strong>Created At:</strong>
+  <%= @logistic.created_at %>
+</p>
+
+<p>
+  <strong>Updated At:</strong>
+  <%= @logistic.updated_at %>
+</p>
+
 <%= link_to 'Edit', edit_logistic_path(@logistic), class:"btn btn-outline-secondary" %> |
 <%= link_to 'Back', logistics_path, class:"btn btn-outline-secondary" %>
 
 </div>
 </div>
-
