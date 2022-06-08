@@ -38,6 +38,11 @@
   <%= @logistic.updated_at %>
 </p>
 
+<p>
+  <strong>Deletion Comments:</strong>
+    <%= @logistic.message %>
+</p>
+
 <%= link_to 'Edit', edit_logistic_path(@logistic), class:"btn btn-outline-secondary" %> |
 <%= link_to 'Back', logistics_path, class:"btn btn-outline-secondary" %>
 

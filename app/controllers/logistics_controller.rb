@@ -1,5 +1,5 @@
 class LogisticsController < ApplicationController
-  before_action :set_logistic, only: %i[ show edit update destroy ]
+  before_action :set_logistic, only: %i[ show edit update destroy discard ]
 
   # GET /logistics or /logistics.json
   def index
@@ -37,20 +37,31 @@ class LogisticsController < ApplicationController
   # PATCH/PUT /logistics/1 or /logistics/1.json
   def update
     respond_to do |format|
-      if @logistic.update(logistic_params)
-        format.html { redirect_to logistic_url(@logistic), notice: "Logistic was successfully updated." }
+      
+    @logistic.undiscard if params.dig(:restore)
+
+  if
+     @logistic.update(logistic_params)
+    
+        format.html { redirect_to logistic_url(@logistic), notice: "Entry was successfully updated." }
         format.json { render :show, status: :ok, location: @logistic }
-      else
+    else
+    
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @logistic.errors, status: :unprocessable_entity }
-      end
+    end
     end
   end
 
+
   # DELETE /logistics/1 or /logistics/1.json
   def destroy
-    @logistic.destroy
-
+    if @logistic.discarded?
+      @logistic.delete
+    else
+      @logistic.discard
+    end
+    
     respond_to do |format|
       format.html { redirect_to logistics_url, notice: "Entry was successfully destroyed." }
       format.json { head :no_content }
@@ -65,6 +76,6 @@ class LogisticsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def logistic_params
-      params.require(:logistic).permit(:Inventory, :List, :product, :color, :size, :quantity, :location)
+      params.require(:logistic).permit(:Inventory, :List, :product, :color, :size, :quantity, :location, :message, :restore)
     end
 end

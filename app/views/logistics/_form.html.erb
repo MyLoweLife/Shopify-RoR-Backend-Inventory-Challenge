@@ -38,6 +38,20 @@
     <%= form.text_field :location, id: :logistic_location %>
   </div>
 </br>
+  
+  <%= content_tag :div, class: 'field' do %>
+    
+    Deletion Comments:
+  </br>
+    <%= form.text_field :message, id: :logistic_message, size: "50x5" %>
+  </br>
+    <%= check_box_tag :restore %>
+    Restore deleted record
+    
+    
+  <% end if logistic.discarded? %>
+   
+</br>
   <div class="actions">
     <%= form.submit class:'btn btn-outline-dark' %>
   </div>
