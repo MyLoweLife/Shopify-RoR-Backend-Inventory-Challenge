@@ -39,8 +39,10 @@
 </p>
 
 <p>
-  <strong>Deletion Comments:</strong>
-    <%= @logistic.message %>
+  <% if @logistic.discarded?  %>
+    <strong>Deletion Comments:</strong>
+      <%= @logistic.message %>
+  <% end  %>
 </p>
 
 <%= link_to 'Edit', edit_logistic_path(@logistic), class:"btn btn-outline-secondary" %> |
