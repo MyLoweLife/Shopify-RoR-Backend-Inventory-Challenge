@@ -1,8 +1,7 @@
 {
   "name": "logistics",
   "packageManager": "yarn@3.2.1",
-  "devDependencies": {
-    "webpack": "^5.73.0",
-    "webpack-dev-server": "^4.9.2"
+  "dependencies": {
+    "yarn": "1.22.19"
   }
 }
